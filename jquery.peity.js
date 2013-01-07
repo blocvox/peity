@@ -133,7 +133,9 @@
 
       context.save()
       context.translate(half, half)
-      context.rotate(-pi / 2)
+
+      var rotate = opts.rotate || 0;
+      context.rotate(rotate - pi / 2)
 
       for (i = 0; i < length; i++) {
         var value = values[i]
